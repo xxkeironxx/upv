@@ -1,0 +1,12 @@
+#!/bin/bash
+com=$1
+if [[ "$1" < "2" ]] 
+then
+	echo "wrong" && exit 101
+elif [[ $1 -gt "9" ]]
+then
+	echo "wrong" && exit 101
+fi
+echo "apagamos numero $com"
+echo "{ printf \"practica\ncos\n1\n$com\n2\nyes\n\n\033\0334\n\"; } | telnet pdujupiter.disca.upv.es"
+
